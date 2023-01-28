@@ -1,6 +1,10 @@
 # ParticleEngine
 
-This was an old library I wrote to help my gamedev cycle. I migrated the code to work with the latest versions of Visual Studio and MonoGame.
+This was an old library I wrote to help my gamedev cycle. I migrated the code to work with the latest versions of Visual Studio and MonoGame. At a glance, I already see areas of improvement—modifying particles by type, cleaner code consistency, different built-in particle types, etc.—although, I doubt I'll rework this anytime soon. Unfortunately, I had to remove the connected particles (seen below) due to needing a modified .dll of the MonoGame framework. It was an easy enough change to make in the SpriteBatch class, just add an override that accepts four vectors. Then you just link a particle's top vectors to a referenced particle's bottom vectors, and make sure they pull towards each other.
+
+
+https://user-images.githubusercontent.com/119130949/215289037-684c01c4-9f26-42cd-abba-bd048b908300.mp4
+
 
 ### Setting up
 
@@ -69,4 +73,7 @@ And lastly, here's what the Firework particle code looks like:
     }
 ```
 
-The Firework uses the "firework" texture, which is an all-white texture animation of a firework spark.
+The Firework uses a spritesheet texture, an all-white animation of a firework spark.
+
+
+https://user-images.githubusercontent.com/119130949/215289464-d423ab8b-21de-44d8-9606-89cb937a9029.mp4
